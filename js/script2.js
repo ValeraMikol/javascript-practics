@@ -24,8 +24,17 @@
 'use strict';
 
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', ''); //помещаем в переменную ответ на вопрос от пользователя
+let numberOfFilms  //помещаем в переменную ответ на вопрос от пользователя
     
+// function start() {
+//     numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+//     }
+// }
+// start();
+
 const personalMovieDB = { // создаём обьект 
     count: numberOfFilms, // в свойство count помещаем переменную с ответом
     movies: {},
@@ -34,31 +43,44 @@ const personalMovieDB = { // создаём обьект
     privat: false
 };
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-    b = prompt('На сколько оцените его?', ''),
-    c = prompt('Один из последних просмотренных фильмов?', ''),
-    e = prompt('На сколько оцените его?', '');
+// const a = prompt('Один из последних просмотренных фильмов?', ''),
+//     b = prompt('На сколько оцените его?', ''),
+//     c = prompt('Один из последних просмотренных фильмов?', ''),
+//     e = prompt('На сколько оцените его?', '');
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = e;
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = e;
 
-for (let i = 0; i < 2; i++){ //создаём цикл начинаем с 0 , цикл будет добавлять число пока не дойдёт до 2
-    const a = prompt('Один из последних просмотренных фильмов?', ''),
-        b = prompt('На сколько оцените его?', '');
-    if (a != null && b != null && a != '' && b != '' && a.length < 50) { // сдесь мы задаём условия а не должна ровняться null, а не должна ровняться пустой строке, длина а не должна быть больше 50
-        personalMovieDB.movies[a] = b;// то что произойдет если условия будут выполнены
-        console.log('done');
-    } else { // то что произойдет если условие не выполниться
-        console.log('error');
-        i--;//если условие не выполнилось то мы вернёмся на одно повторение назад и вопросы зададуться еще раз
-    }
+// for (let i = 0; i < 2; i++){ //создаём цикл начинаем с 0 , цикл будет добавлять число пока не дойдёт до 2
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//         b = prompt('На сколько оцените его?', '');
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) { // сдесь мы задаём условия а не должна ровняться null, а не должна ровняться пустой строке, длина а не должна быть больше 50
+//         personalMovieDB.movies[a] = b;// то что произойдет если условия будут выполнены
+//         console.log('done');
+//     } else { // то что произойдет если условие не выполниться
+//         console.log('error');
+//         i--;//если условие не выполнилось то мы вернёмся на одно повторение назад и вопросы зададуться еще раз
+//     }
 
-    personalMovieDB.movies[a] = b;
-};
+//     personalMovieDB.movies[a] = b;
+// };
 
-if (personalMovieDB.count < 10) {
+// if (personalMovieDB.count < 10) {
     
-    console.log('Просмотрено довольно мало фильмов!');
-}  
+//     console.log('Просмотрено довольно мало фильмов!');
+// }  
 
-console.log(personalMovieDB);
+// function showMyDB(hidden) {
+//     if (!hidden) {
+//         console.log(personalMovieDB);
+//     }
+// }
+// showMyDB(personalMovieDB.privat);
+
+// function writeYourGenres() {
+//     for (let i = 1; i <= 3; i++){
+//        personalMovieDB.genres[i - 1] = prompt(`Ваш люьимый жанр под номером ${i}`);
+//     }
+// }
+// writeYourGenres();
+
